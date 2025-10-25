@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Busca de Filmes (IMDb via OMDb)</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- CONTAINER PRINCIPAL -->
+    <div class="container">
+
+        <!-- CABEÇALHO COM TEXTO EXPLICATIVO -->
+        <header>
+            <h1>Projeto: Busca de Filmes (API IMDb via OMDb e API TMDb)</h1>
+            <p>
+                Este exemplo mostra como conectar uma página HTML com duas APIs reais da internet.
+                Vamos buscar filmes pelo título usando a API gratuita da OMDb, que traz dados do IMDb,
+                e a API do TMDb, que fornece informações adicionais sobre filmes, nesse caso, a busca pelo nome do ator.
+            </p>
+        </header>
+
+        <hr>
+
+        <!-- ÁREA DE PESQUISA -->
+        <section id="container-pesquisa">
+            <h2>Faça sua busca pelo título do filme</h2>
+            <p>Digite o nome de um filme e clique no botão <strong>Buscar</strong>.</p>
+
+            <div class="barra-pesquisa">
+                <input id="campo-busca" type="text" placeholder="Ex.: Batman, Matrix, Avatar..." />
+                <button id="botao-buscar" onclick="buscarFilmes()">Buscar</button>
+            </div>
+
+            <p id="mensagem-status" class="status"></p>
+        </section>
+
+        <hr>
+
+        <!-- RESULTADOS DA BUSCA POR FILME -->
+        <section id="container-resultados">
+            <h2>Resultados da busca por filme</h2>
+            <p>Abaixo aparecerão os pôsteres e nomes dos filmes retornados pela API OMDB:</p>
+            <div id="lista-resultados" class="grade"></div>
+        </section>
+
+        <hr>
+
+        <!-- PAGINAÇÃO DA BUSCA POR FILME -->
+        <section id="container-paginacao">
+            <h2>Navegar entre páginas</h2>
+            <p>Use os botões para ver mais resultados.</p>
+            <div class="paginacao">
+                <button id="botao-anterior" onclick="paginaAnterior()">◀ Anterior</button>
+                <button id="botao-proximo" onclick="proximaPagina()">Próxima ▶</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="container-ator">
+            <h2>Faça sua busca pelo nome do ator/atriz</h2>
+            <p>Digite o nome de um ator ou atriz e veja seus filmes.</p>
+
+            <div class="barra-pesquisa">
+                <input id="campo-ator" type="text" placeholder="Ex.: Tom Hanks, Emma Stone..." />
+                <button onclick="buscarFilmesPorAtor()">Buscar por Ator</button>
+            </div>
+
+            <p id="status-ator" class="status"></p>
+        </section>
+
+        <hr>
+
+        <!-- RESULTADOS DA BUSCA POR ATOR -->
+        <section id="container-resultados">
+            <h2>Resultados da busca por ator</h2>
+            <p>Abaixo aparecerão os pôsteres e nomes dos filmes em que o ator participou, retornados pela API TMDb:</p>
+            <div id="lista-ator" class="grade"></div>
+        </section>
+
+        <hr>
+
+        <!-- PAGINAÇÃO DA BUSCA POR ATOR -->
+        <section id="container-paginacao-ator">
+            <h2>Navegar entre páginas de atores</h2>
+            <p>Use os botões para ver mais resultados de atores/atrizes.</p>
+            <div class="paginacao">
+                <button onclick="paginaAnteriorAtor()">◀ Anterior</button>
+                <button onclick="proximaPaginaAtor()">Próxima ▶</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- RODAPÉ EXPLICATIVO -->
+        <footer>
+            <p>
+                Projeto de integração com APIs públicas para busca de filmes usando HTML, CSS e JavaScript.
+                Dados fornecidos pelas APIs <a href="http://www.omdbapi.com/">OMDb</a> e
+                <a href="https://www.themoviedb.org/">TMDb</a>.
+            </p>
+        </footer>
+    </div>
+
+    <script src="config.js" onerror="console.warn('config.js não encontrado, usando placeholders');"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

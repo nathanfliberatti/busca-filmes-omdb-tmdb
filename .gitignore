@@ -1,0 +1,7 @@
+# Evita subir as chaves de API
+config.js
+
+# Pastas e arquivos temporários
+node_modules/
+.DS_Store
+*.log
