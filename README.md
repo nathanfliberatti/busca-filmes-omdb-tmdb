@@ -47,18 +47,13 @@ A aplicação consulta a **API TMDb** e exibe filmes associados a esse artista.
    ```
 2. No arquivo `app.js`, adicione sua chave da OMDb e TMDb (respectivamente):
    ```javascript
-   let CHAVE_API = typeof OMDB_API_KEY !== "undefined" ? OMDB_API_KEY : "SUA_CHAVE_AQUI";
+   const CHAVE_API = "COLOQUE_SUA_CHAVE_AQUI";
    ```
    ```javascript
-   let TMDB_API_KEY_LOCAL = typeof TMDB_API_KEY !== "undefined" ? TMDB_API_KEY : "SUA_CHAVE_AQUI";
+   const TMDB_API_KEY = "COLOQUE_SUA_CHAVE_AQUI";
    ```
-3. Ou crie um arquivo config.js:
-   ```javascript
-   const OMDB_API_KEY = "SUA_CHAVE_AQUI";
-   const TMDB_API_KEY = "SUA_CHAVE_AQUI";
-   ```
-4. Abra o arquivo `index.html` no seu navegador.
-5. Pronto! Já é possível buscar filmes e atores/atrizes diretamente pelo navegador. 🍿
+3. Abra o arquivo `index.html` no seu navegador.
+4. Pronto! Já é possível buscar filmes e atores/atrizes diretamente pelo navegador. 🍿
 
 ---
 
@@ -87,10 +82,8 @@ busca-filmes-omdb-tmdb/
 │
 ├── index.html
 ├── app.js
-├── config.js
 ├── style.css
 ├── README.md
-├── .gitignore 
 └── docs/
     ├── print-omdb.png
     └── print-tmdb.png

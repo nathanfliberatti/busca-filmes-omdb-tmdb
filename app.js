@@ -1,10 +1,7 @@
 // ===== CONFIGURAÇÃO INICIAL =====
 // Pegue sua chave gratuita em: http://www.omdbapi.com/apikey.aspx
-let CHAVE_API = typeof OMDB_API_KEY !== "undefined" ? OMDB_API_KEY : "SUA_CHAVE_AQUI";
-let TMDB_API_KEY_LOCAL = typeof TMDB_API_KEY !== "undefined" ? TMDB_API_KEY : "SUA_CHAVE_AQUI";
-
+const CHAVE_API = "6a4c6cef";
 const URL_BASE = "https://www.omdbapi.com/";
-const TMDB_URL = "https://api.themoviedb.org/3";
 
 // ===== CONEXÃO COM O HTML =====
 const campoBusca = document.getElementById("campo-busca");
@@ -106,6 +103,8 @@ function exibirFilmes(filmes) {
 
 // ===== INTEGRAÇÃO COM TMDb =====
 // Pegue uma chave gratuita em: https://www.themoviedb.org/settings/api
+const TMDB_API_KEY = "9c40a4d107981e91cf4ef4d05c16479b";
+const TMDB_URL = "https://api.themoviedb.org/3";
 
 // ===== VARIÁVEIS DE CONTROLE PARA ATORES =====
 let termoAtor = "";
